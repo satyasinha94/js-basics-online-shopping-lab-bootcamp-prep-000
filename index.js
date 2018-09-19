@@ -28,7 +28,7 @@ function total() {
   for (var i = 0; i < cart.length + 1; i++) {
     if (cart[i].itemPrice === price) {
       totalPrice += price
-    } 
+    }
   }
 return totalPrice
 }
