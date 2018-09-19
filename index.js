@@ -10,15 +10,28 @@ function setCart(c) {
 }
 
 function addToCart(item) {
- // write your code here
+  var newItem = {};
+  var price = Math.floor(Math.random() * Math.floor(100));
+  Object.assign (newItem, {itemName: item}, {itemPrice: price});
+  cart.push(newItem);
+  return `${item} has been added to your cart.`;
 }
 
 function viewCart() {
-  // write your code here
+  if (cart = []) {
+    return "Your shopping cart is empty."
+  }
 }
 
 function total() {
-  // write your code here
+  var totalPrice = 0
+  for (var i = 0; i < cart.length + 1; i++) {
+    if (isNaN(cart[i])) {
+      continue;
+    }
+  	totalPrice += cart[i]
+  }
+return totalPrice
 }
 
 function removeFromCart(item) {
@@ -26,5 +39,7 @@ function removeFromCart(item) {
 }
 
 function placeOrder(cardNumber) {
-  // write your code here
-}
+  if (typeof cardNumber === "undefined") {
+  return "Sorry, we don't have a credit card on file for you."
+  }
+  }
