@@ -29,7 +29,7 @@ function total() {
     if (isNaN(cart[i])) {
       continue;
     }
-  	totalPrice += cart[i]
+  	totalPrice += cart[i].itemPrice
   }
 return totalPrice
 }
