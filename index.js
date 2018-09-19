@@ -26,10 +26,9 @@ function viewCart() {
 function total() {
   var totalPrice = 0
   for (var i = 0; i < cart.length + 1; i++) {
-    if (isNaN(cart[i])) {
-      continue;
-    }
-  	totalPrice += cart[i].itemPrice
+    if (cart[i].itemPrice === price) {
+      totalPrice += price
+    } 
   }
 return totalPrice
 }
